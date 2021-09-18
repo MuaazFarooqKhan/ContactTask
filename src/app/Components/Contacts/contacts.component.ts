@@ -39,5 +39,15 @@ export class ContactsComponent implements OnInit {
   collapsed() {
     this.isCollapsed = !this.isCollapsed
   }
+
+  clickMessage() {
+    alert("Hello! I am Message alert box!");
+  }
+  clickCall() {
+    alert("Hello! I am Call alert box!");
+  }
+  clickSearch() {
+    alert("Hello! I'm Search Box")
+  }
 }
 

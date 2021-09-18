@@ -1,25 +1,17 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
-        <div class="input-group rounded">
-            <input type="search" class="rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-            <mat-icon class="searchIcon">
+        <div class="input-group rounded sear">
+            <input type="search" class="rounded roun" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <mat-icon class="searchIcon" (click)="clickSearch()">
                 search
             </mat-icon>
         </div>
         <mat-divider></mat-divider>
-
         <button mat-button class="menu-button">
                     <mat-icon>person</mat-icon>
-                    <span>Profile</span>
-                  </button>
-        <button mat-button class="menu-button">
-                    <mat-icon>info</mat-icon>
-                    <span>About</span>
-                  </button>
-        <mat-divider></mat-divider>
-        <button mat-button class="menu-button">
-                    <mat-icon>help</mat-icon>
-                    <span>Help</span>
+                    <span style="margin-left: 20px;">Profile</span>
+                    <mat-icon style="margin-left: 275px;" (click)="clickMessage()">message</mat-icon>
+                    <mat-icon (click)="clickCall()">call</mat-icon>
                   </button>
     </mat-sidenav>
 

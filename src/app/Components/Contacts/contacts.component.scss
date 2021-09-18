@@ -15,7 +15,9 @@ mat-sidenav {
 }
 
 mat-sidenav-container {
-    height: calc(96vh - 0px);
+    height: 565px;
+    min-height: 565px;
+    max-height: 600px;
 }
 
 .menu-button {
@@ -57,8 +59,25 @@ mat-divider {
 
 .searchIcon {
     position: absolute;
-    width: 90%;
-    margin-top: 10px;
-    color: black;
+    width: 95%;
+    color: white;
     background-color: transparent;
+    text-align-last: right;
+    font-size: 45px;
+}
+
+.msg {
+    position: absolute;
+    width: 95%;
+    font-size: 45px;
+}
+
+.roun {
+    width: 85%;
+    height: 90%;
+    text-align: center;
+}
+
+.sear {
+    height: 50px;
 }
