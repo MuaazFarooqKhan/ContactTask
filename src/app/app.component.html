@@ -1,7 +1,9 @@
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
-</div>
+<app-tool-bar [inputSideNav]="sideNav"></app-tool-bar>
+<mat-sidenav-container>
+    <mat-sidenav #sideNav mode="side">
+        <app-contacts></app-contacts>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

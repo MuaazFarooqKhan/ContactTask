@@ -1,0 +1,21 @@
+.searchIcon {
+    color: white;
+}
+
+.menu-button {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    mat-icon {
+        margin-right: 8px;
+    }
+    color: white;
+}
+
+.h1 {
+    color: white;
+    position: absolute;
+    margin-left: 70px;
+    margin-top: 20px;
+}
