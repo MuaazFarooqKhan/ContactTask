@@ -2,9 +2,12 @@
     <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
         <div class="input-group rounded sear">
             <input type="search" class="rounded roun" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <button mat-button class="menu-button" style="position: absolute;">
+
             <mat-icon class="searchIcon" (click)="clickSearch()">
                 search
             </mat-icon>
+            </button>
         </div>
         <mat-divider></mat-divider>
         <button mat-button class="menu-button">
