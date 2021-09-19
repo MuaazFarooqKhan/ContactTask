@@ -11,11 +11,18 @@
         </div>
         <mat-divider></mat-divider>
         <button mat-button class="menu-button">
-                    <mat-icon>person</mat-icon>
-                    <span style="margin-left: 20px;">Profile</span>
-                    <mat-icon style="margin-left: 275px;" (click)="clickMessage()">message</mat-icon>
+            <img class="avatar mat-elevation-z8" src="https://source.unsplash.com/c_GmwfHBDzk/200x200" />
+            <span style="margin-left: 20px;">Profile</span>
+                    <mat-icon style="margin-left: 180px;" (click)="clickMessage()">message</mat-icon>
                     <mat-icon (click)="clickCall()">call</mat-icon>
                   </button>
+        <mat-divider></mat-divider>
+        <button mat-button class="menu-button">
+                    <img class="avatar mat-elevation-z8" src="https://source.unsplash.com/c_GmwfHBDzk/200x200" />
+                    <span style="margin-left: 20px;">Profile</span>
+                            <mat-icon style="margin-left: 180px;" (click)="clickMessage()">message</mat-icon>
+                            <mat-icon (click)="clickCall()">call</mat-icon>
+                          </button>
     </mat-sidenav>
 
 </mat-sidenav-container>

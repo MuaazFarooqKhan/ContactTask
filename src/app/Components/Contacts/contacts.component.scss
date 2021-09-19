@@ -12,12 +12,15 @@ mat-sidenav {
     border-radius: 10px;
     padding: 16px;
     text-align: center;
+    height: 700px;
+    min-height: 700px;
+    max-height: 700px;
 }
 
 mat-sidenav-container {
-    height: 569px;
-    min-height: 569px;
-    max-height: 600px;
+    height: 700px;
+    min-height: 700px;
+    max-height: 700px;
 }
 
 .menu-button {
