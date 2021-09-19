@@ -10,19 +10,12 @@
             </button>
         </div>
         <mat-divider></mat-divider>
-        <button mat-button class="menu-button">
-            <img class="avatar mat-elevation-z8" src="https://source.unsplash.com/c_GmwfHBDzk/200x200" />
-            <span style="margin-left: 20px;">Profile</span>
-                    <mat-icon style="margin-left: 180px;" (click)="clickMessage()">message</mat-icon>
-                    <mat-icon (click)="clickCall()">call</mat-icon>
-                  </button>
-        <mat-divider></mat-divider>
-        <button mat-button class="menu-button">
-                    <img class="avatar mat-elevation-z8" src="https://source.unsplash.com/c_GmwfHBDzk/200x200" />
-                    <span style="margin-left: 20px;">Profile</span>
-                            <mat-icon style="margin-left: 180px;" (click)="clickMessage()">message</mat-icon>
-                            <mat-icon (click)="clickCall()">call</mat-icon>
-                          </button>
+        <button mat-button class="menu-button" *ngFor="let contact of contactLists" (click)="sendId(contact.id)">
+                <img class="avatar mat-elevation-z8" src={{contact.imageUrl}} />
+                <span style="margin-left: 20px;">{{contact.name}}</span>
+                        <mat-icon style="margin-left: 180px;" (click)="clickMessage()">message</mat-icon>
+                        <mat-icon (click)="clickCall()">call</mat-icon>
+                      </button>
     </mat-sidenav>
 
 </mat-sidenav-container>

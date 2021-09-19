@@ -14,6 +14,7 @@ import { ContactsComponent } from './Components/Contacts/contacts.component';
 import { EmailsComponent } from './Components/Emails/emails.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToolBarComponent } from './Components/tool-bar/tool-bar.component';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ToolBarComponent } from './Components/tool-bar/tool-bar.component';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
+    MatListModule,
     MatButtonToggleModule,
     NgbModule
   ],

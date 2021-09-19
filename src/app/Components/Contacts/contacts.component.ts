@@ -1,7 +1,10 @@
+import { Email } from './../../Models/Contacts/email.model';
+import { Contacts } from './../../Models/Contacts/contacts.model';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 import { delay } from 'rxjs/operators';
+import { ContactsService } from 'src/app/Services/Contacts/contacts.service';
 
 @Component({
   selector: 'app-contacts',
@@ -10,13 +13,28 @@ import { delay } from 'rxjs/operators';
 })
 export class ContactsComponent implements OnInit {
 
-  isCollapsed:boolean = true;
+  isCollapsed: boolean = true;
+  contactLists: Contacts[] = []
+  emails : Email[] =[]
 
-  constructor(private observer: BreakpointObserver) {
+
+  constructor(private observer: BreakpointObserver, private contactsService: ContactsService) {
   }
 
   ngOnInit(): void {
+    this.getAllContacts();
   }
+  getAllContacts() {
+    this.contactsService.getAllContacts().subscribe((res) => {
+      this.contactLists = res;
+    })
+  }
+  getContact(id:Number) {
+    this.contactsService.getContactId(id).subscribe((res) => {
+      this.emails = res;
+    })
+  }
+  
 
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
